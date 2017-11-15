@@ -1,10 +1,10 @@
-"use strict";
-
-// Declare app level module which depends on views, and components
-angular.module("myApp", ["ngRoute"]).config([
-  "$locationProvider",
-  "$routeProvider",
-  function($locationProvider, $routeProvider) {
-    otherwise({ redirectTo: "/" });
-  }
-]);
+(function() {
+  angular.module("newsApp", ["ui.router"]).config(function($stateProvider) {
+    var newsState = {
+      name: "news",
+      url: "",
+      template: "<news></news>"
+    };
+    $stateProvider.state(newsState);
+  });
+})();
