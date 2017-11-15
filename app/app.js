@@ -1,5 +1,7 @@
 (function() {
-  angular.module("newsApp", ["ui.router"]).config(function($stateProvider) {
+  var module = angular.module("newsApp", ["ui.router"]);
+
+  module.config(function($stateProvider) {
     var newsState = {
       name: "news",
       url: "",
